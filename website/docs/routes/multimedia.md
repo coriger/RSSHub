@@ -948,13 +948,6 @@ See [Directory](https://www.javlibrary.com/en/star_list.php) to view all stars.
 <Route author="coriger" example="/javmix/actress/三上悠亚" path="/javmix/actress/:actress" paramsDesc={['女优名字']}>
 </Route>
 
-## MissAV {#missav}
-
-### 女优 {#missav-nv-you}
-
-<Route author="coriger" example="/missav/actress/葵司" path="/missav/actress/:actress" paramsDesc={['女优名字']}>
-</Route>
-
 ## Last.fm {#last.fm}
 
 ### 用户播放记录 {#last.fm-yong-hu-bo-fang-ji-lu}
@@ -981,6 +974,13 @@ See [Directory](https://www.javlibrary.com/en/star_list.php) to view all stars.
 
 </Route>
 
+
+## MissAV {#missav}
+
+### 女优 {#missav-nv-you}
+
+<Route author="coriger" example="/missav/actress/葵司" path="/missav/actress/:actress" paramsDesc={['女优名字']}>
+</Route>
 
 ## Mixcloud {#mixcloud}
 
