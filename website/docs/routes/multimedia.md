@@ -1,5 +1,12 @@
 # 🔊 Multimedia
 
+## JavMix {#javmix}
+
+### 女优 {#javmix-nv-you}
+
+<Route author="coriger" example="/javmix/actress/三上悠亚" path="/javmix/actress/:actress" paramsDesc={['女优名字']}>
+</Route>
+
 ## 141JAV {#141jav}
 
 :::tip
@@ -967,13 +974,6 @@ See [Directory](https://www.javlibrary.com/en/star_list.php) to view all stars.
 
 </Route>
 
-
-## Missav {#missav}
-
-### 女优 {#missav-nv-you}
-
-<Route author="coriger" example="/missav/actress/三上悠亚" path="/missav/actress/:actress" paramsDesc={['女优名字']}>
-</Route>
 
 ## Mixcloud {#mixcloud}
 
