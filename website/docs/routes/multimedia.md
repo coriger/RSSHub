@@ -1,12 +1,5 @@
 # 🔊 Multimedia
 
-## JavMix {#javmix}
-
-### 女优 {#javmix-nv-you}
-
-<Route author="coriger" example="/javmix/actress/三上悠亚" path="/javmix/actress/:actress" paramsDesc={['女优名字']}>
-</Route>
-
 ## 141JAV {#141jav}
 
 :::tip
@@ -946,6 +939,13 @@ See [Directory](https://www.javlibrary.com/en/star_list.php) to view all stars.
 | ---------- | ----------- | --------- |
 | userwanted | userwatched | userowned |
 
+</Route>
+
+## JavMix {#javmix}
+
+### 女优 {#javmix-nv-you}
+
+<Route author="coriger" example="/javmix/actress/三上悠亚" path="/javmix/actress/:actress" paramsDesc={['女优名字']}>
 </Route>
 
 ## Last.fm {#last.fm}
