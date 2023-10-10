@@ -158,6 +158,9 @@ COPY --from=chromium-downloader /app/node_modules/.cache/puppeteer /app/node_mod
 # if grep matches nothing then it will exit with 1, thus, we cannot `set -e` here
 RUN \
     set -x && \
+    corepack enable pnpm && \
+    npx playwright install && \
+    npx playwright install msedge-dev && \
     if [ "$PUPPETEER_SKIP_DOWNLOAD" = 0 ] && [ "$TARGETPLATFORM" = 'linux/amd64' ]; then \
         echo 'Verifying Chromium installation...' && \
         ldd $(find /app/node_modules/.cache/puppeteer/ -name chrome -type f) | grep "not found" ; \
