@@ -24,8 +24,6 @@ RUN \
     export PUPPETEER_SKIP_DOWNLOAD=true && \
     corepack enable pnpm && \
     pnpm install --prod && \
-    npx playwright install && \
-    npx playwright install msedge-dev && \
     pnpm rb
 
 # ---------------------------------------------------------------------------------------------------------------------
