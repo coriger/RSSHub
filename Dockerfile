@@ -157,7 +157,7 @@ COPY --from=chromium-downloader /app/node_modules/.cache/puppeteer /app/node_mod
 RUN \
     set -x && \
     corepack enable pnpm && \
-    npx playwright install && \
+    npx playwright install --with-deps chromium && \
     npx playwright install msedge-dev && \
     if [ "$PUPPETEER_SKIP_DOWNLOAD" = 0 ] && [ "$TARGETPLATFORM" = 'linux/amd64' ]; then \
         echo 'Verifying Chromium installation...' && \
@@ -171,6 +171,7 @@ RUN \
     fi;
 
 COPY --from=docker-minifier /app /app
+COPY /opt/microsoft/msedge-dev/msedge /app/opt/microsoft/msedge-dev/msedge
 
 EXPOSE 1200
 ENTRYPOINT ["dumb-init", "--"]
