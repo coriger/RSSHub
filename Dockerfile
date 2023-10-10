@@ -39,6 +39,7 @@ COPY ./package.json /app/
 RUN \
     set -ex && \
     grep -Po '(?<="puppeteer": ")[^\s"]*(?=")' /app/package.json | tee /ver/.puppeteer_version && \
+    grep -Po '(?<="playwright": ")[^\s"]*(?=")' /app/package.json | tee /ver/.playwright_version && \
     grep -Po '(?<="@vercel/nft": ")[^\s"]*(?=")' /app/package.json | tee /ver/.nft_version && \
     grep -Po '(?<="fs-extra": ")[^\s"]*(?=")' /app/package.json | tee /ver/.fs_extra_version
 
@@ -84,6 +85,7 @@ FROM node:18-bullseye-slim AS chromium-downloader
 WORKDIR /app
 COPY ./.puppeteerrc.js /app/
 COPY --from=dep-version-parser /ver/.puppeteer_version /app/.puppeteer_version
+COPY --from=dep-version-parser /ver/.playwright_version /app/.playwright_version
 
 ARG TARGETPLATFORM
 ARG USE_CHINA_NPM_REGISTRY=0
@@ -103,9 +105,11 @@ RUN \
         unset PUPPETEER_SKIP_DOWNLOAD && \
         corepack enable pnpm && \
         pnpm add puppeteer@$(cat /app/.puppeteer_version) --save-prod && \
+        pnpm add playwright@$(cat /app/.playwright_version) --save-prod && \
         pnpm rb ; \
     else \
         mkdir -p /app/node_modules/.cache/puppeteer ; \
+        mkdir -p /app/node_modules/.cache/playwright ; \
     fi;
 
 # ---------------------------------------------------------------------------------------------------------------------
