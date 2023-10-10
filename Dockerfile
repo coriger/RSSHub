@@ -106,7 +106,7 @@ RUN \
         corepack enable pnpm && \
         pnpm add puppeteer@$(cat /app/.puppeteer_version) --save-prod && \
         pnpm add playwright@1.38.1 --save-prod && \
-        npx playwright install msedge-dev && \
+        pnpm playwright install msedge-dev --save-prod && \
         pnpm rb ; \
     else \
         mkdir -p /app/node_modules/.cache/puppeteer ; \
