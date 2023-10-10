@@ -105,7 +105,7 @@ RUN \
         unset PUPPETEER_SKIP_DOWNLOAD && \
         corepack enable pnpm && \
         pnpm add puppeteer@$(cat /app/.puppeteer_version) --save-prod && \
-        pnpm add playwright@$(cat /app/.playwright_version) --save-prod && \
+        npm install playwright@$(cat /app/.playwright_version) --save-prod && \
         pnpm rb ; \
     else \
         mkdir -p /app/node_modules/.cache/puppeteer ; \
