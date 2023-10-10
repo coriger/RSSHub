@@ -1204,7 +1204,7 @@ Country Code
 
 ### 用户作品 {#dou-yin-video}
 
-<Route author="coriger" example="/douyin/video/MS4wLjABAAAARcAHmmF9mAG3JEixq_CdP72APhBlGlLVbN-1eBcPqao" path="/douyin/video/:uid" paramsDesc={['uid，可在用户页面 URL 中找到']} anticrawler="1" radar="1" rssbud="1" puppeteer="1" />
+<Route author="coriger" example="/douyin/video/MS4wLjABAAAARcAHmmF9mAG3JEixq" path="/douyin/video/:uid" paramsDesc={['uid，可在用户页面 URL 中找到']} />
 
 ### 标签 {#dou-yin-biao-qian}
 
