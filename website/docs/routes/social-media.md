@@ -1201,6 +1201,11 @@ Country Code
 
 <Route author="Max-Tortoise Rongronggg9" example="/douyin/user/MS4wLjABAAAARcAHmmF9mAG3JEixq_CdP72APhBlGlLVbN-1eBcPqao" path="/douyin/user/:uid/:routeParams?" paramsDesc={['uid，可在用户页面 URL 中找到', '额外参数，query string 格式，请参阅上面的表格']} anticrawler="1" radar="1" rssbud="1" puppeteer="1" />
 
+
+### 用户作品 {#dou-yin-video}
+
+<Route author="coriger" example="/douyin/video/MS4wLjABAAAARcAHmmF9mAG3JEixq_CdP72APhBlGlLVbN-1eBcPqao" path="/douyin/video/:uid" paramsDesc={['uid，可在用户页面 URL 中找到']} anticrawler="1" radar="1" rssbud="1" puppeteer="1" />
+
 ### 标签 {#dou-yin-biao-qian}
 
 <Route author="TonyRL" example="/douyin/hashtag/1592824105719812" path="/douyin/hashtag/:cid/:routeParams?" paramsDesc={['标签 ID，可在标签页面 URL 中找到', '额外参数，query string 格式，请参阅上面的表格']} anticrawler="1" radar="1" rssbud="1" puppeteer="1" />
