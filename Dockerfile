@@ -15,7 +15,7 @@ RUN \
         pnpm config set registry https://registry.npmmirror.com ; \
     fi;
 
-COPY ./pnpm-lock.yaml /app/
+# COPY ./pnpm-lock.yaml /app/
 COPY ./package.json /app/
 
 # lazy install Chromium to avoid cache miss, only install production dependencies to minimize the image size
