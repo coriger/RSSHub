@@ -5,7 +5,7 @@ FROM node:18-bullseye AS dep-builder
 WORKDIR /app
 
 # place ARG statement before RUN statement which need it to avoid cache miss
-ARG USE_CHINA_NPM_REGISTRY=1
+ARG USE_CHINA_NPM_REGISTRY=0
 RUN \
     set -ex && \
     if [ "$USE_CHINA_NPM_REGISTRY" = 1 ]; then \
@@ -24,7 +24,7 @@ RUN \
     export PUPPETEER_SKIP_DOWNLOAD=true && \
     corepack enable pnpm && \
     pnpm install --prod && \
-    npx playwright install msedge-dev --save-prod && \
+    npx playwright install msedge-dev && \
     pnpm rb
 
 # ---------------------------------------------------------------------------------------------------------------------
